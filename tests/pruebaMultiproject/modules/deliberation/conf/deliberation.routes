@@ -1,0 +1,14 @@
+# Deliberation Home page
+GET           /                                    controllers.deliberation.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /assets/*file                        controllers.Assets.at(path="/public", file)
+GET           /public/*file                        controllers.Assets.at(path="/public", file)
+
+# Comments API
+GET           /api/user/:userId                    controllers.deliberation.Users.findUserById(userId: Long)
+GET           /api/comments                        controllers.deliberation.Comments.findComments()
+GET           /api/comment/:id                     controllers.deliberation.Comments.findCommentById(id: Long)
+GET           /api/comments/:userId                controllers.deliberation.Users.findCommentsByUser(userId: Long)
+DELETE        /api/comment/:id                     controllers.deliberation.Comments.deleteComment(id: Long)
+POST          /api/comment/:userId/:comment        controllers.deliberation.Comments.saveComment(userId: Long, comment: String)

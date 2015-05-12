@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+
+<html lang="en" ng-app="deliberationApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AppCivist - Deliberation</title>
+        <link rel="stylesheet" href="@routes.Assets.at("/bower_components/bootstrap/dist/css/bootstrap.css")">
+        <link rel="stylesheet" href="@routes.Assets.at("/bower_components/font-awesome/css/font-awesome.min.css")"/>
+        <link rel="stylesheet" href="@routes.Assets.at("/app/css/app.css")">
+        <link rel="stylesheet" href="@routes.Assets.at("/bower_components/textAngular/src/textAngular.css")"/>
+        <script src="@routes.Assets.at("/bower_components/angular/angular.js")"></script>
+        <script src="@routes.Assets.at("/bower_components/angular-route/angular-route.js")"></script>
+        <script src="@routes.Assets.at("/bower_components/angular-resource/angular-resource.js")"></script>
+        <script src="@routes.Assets.at("/bower_components/textAngular/dist/textAngular.min.js")"></script>
+        <script src="@routes.Assets.at("/bower_components/textAngular/dist/textAngular-sanitize.min.js")"></script>
+        <script src="@routes.Assets.at("/bower_components/rangy/rangy-core.min.js")"></script>
+        <script src="@routes.Assets.at("/bower_components/rangy/rangy-selectionsaverestore.min.js")"></script>
+        <script src="@routes.Assets.at("/app/js/app.js")"></script>
+        <script src="@routes.Assets.at("/app/js/controllers.js")"></script>
+        <script src="@routes.Assets.at("/app/js/services.js")"></script>
+
+    </head>
+
+    <body ng-controller="Ctrl">
+
+        <div class="container">
+            <div ng-switch on="getUrl()">
+                <div ng-switch-when="/deliberation">
+                    <div class="header clearfix">
+                        <h3 class="text-muted">Deliberation Mockup</h3>
+                    </div>
+                    <div ng-include="'@routes.Assets.at("/app/partials/proposal/proposal.html")'"></div>
+                </div>
+            </div>
+            <div ng-view></div>
+        </div>
+
+    </body>
+
+</html>

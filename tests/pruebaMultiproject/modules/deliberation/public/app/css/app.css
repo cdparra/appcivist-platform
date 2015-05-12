@@ -1,0 +1,82 @@
+/* app css stylesheet */
+body {
+  background: lightgrey;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.row {
+  margin: 1em 0 1em 0;
+}
+
+.proposal {
+  background: #f8f8f8;
+}
+
+.comments ul {
+  list-style-type: none;
+}
+
+.image-profile-comment img {
+  background-size: 100%;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+
+.user-comment a {
+  color: #e7a732;
+  cursor: pointer;
+}
+
+.text-comment * {
+  display: inline;
+}
+
+.options-comment {
+  margin-top: 0.5em;
+  display: block;
+}
+
+.date-comment {
+  color: #0077b3;
+  font-size: 0.750em;
+}
+
+.comment-comment a {
+  text-decoration: none;
+  color: black;
+}
+
+.tags {
+  padding-left: 0;
+}
+
+.tag {
+  padding: 0.1em 0.5em;
+  border-radius: 8px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+.tag.COMPLAINT {
+  border: 1px solid rgba(255, 24, 42, 0.6);
+  background: rgba(255, 24, 42, 0.6);
+}
+.tag.DISAGREE {
+  border: 1px solid rgba(255, 112, 37, 0.6);
+  background: rgba(255, 112, 37, 0.6);
+}
+.tag.NEUTRAL {
+  border: 1px solid rgba(57, 143, 255, 0.6);
+  background: rgba(57, 143, 255, 0.6);
+}
+.tag.AGREE {
+  border: 1px solid rgba(78, 255, 72, 0.6);
+  background: rgba(78, 255, 72, 0.6);
+}
+
+/*# sourceMappingURL=app.css.map */

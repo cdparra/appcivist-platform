@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="deliberationApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AppCivist - Deliberation</title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-route/angular-route.js"></script>
+  <script src="../bower_components/angular-resource/angular-resource.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+
+</head>
+<body ng-controller="Ctrl">
+
+  <div class="container">
+      <div class="header clearfix">
+          <h3 class="text-muted">Deliberation Mockup</h3>
+      </div>
+      <div ng-switch on="getUrl()">
+          <div ng-switch-when="/deliberation">
+              <div ng-include="'partials/proposal/proposal.html'"></div>
+          </div>
+      </div>
+      <div ng-view></div>
+  </div>
+
+</body>
+</html>

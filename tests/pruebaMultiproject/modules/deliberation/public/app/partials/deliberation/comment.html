@@ -1,0 +1,24 @@
+<section id="deliberation" class="row comments">
+    <div class="header clearfix">
+        <h3 class="text-muted">Comment {{comment._id}}</h3>
+    </div>
+    <div class="col-md-12">
+        <ul class="comments">
+            <li class="row comment">
+                <div class="image-profile-comment col-md-1">
+                    <img ng-src="{{comment.user[0].picture}}" alt="" />
+                </div>
+                <div class="col-md-11 text-comment">
+                    <h5 class="user-comment"><a href="#/deliberation/user={{comment.user[0]._id}}">{{comment.user[0].name}}: </a></h5>
+                    <p class="comment-comment">{{comment.comment}}</a></p>
+                    <p class="date-comment"><time datetime="{{comment.date}}"/>{{comment.date | date:"MM/dd/yyyy 'at' HH:mm:ss"}}</p>
+                    <div class="options-comment">
+                        <ul class="tags" ng-repeat="tag in comment.tags">
+                            <li class="tag {{tag.type}}">#{{tag.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
